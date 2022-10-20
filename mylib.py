@@ -1,13 +1,13 @@
 from math import log
-
+from time import sleep
 
 istilik = 0.0
 R = 10000
-resistor = 0
 buffer = 0
 Vout = 0
 Vin = 3.3
 
+resistor = 0
 T0 = 298.15
 B = 4100
 R0 = 5000
@@ -37,8 +37,8 @@ def calc(data):
     Vout=(buffer)/65535;
     buffer=(Vin/Vout)-1;
     resistor=R*buffer;
-    Data=resistor;
-    return Data
+    outData = resistor
+    return outData
 
 def ferq(dataA, dataB):
     ferqData = 0
